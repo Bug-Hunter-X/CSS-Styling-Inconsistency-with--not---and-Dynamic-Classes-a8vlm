@@ -1,0 +1,6 @@
+The following CSS code snippet demonstrates an unusual error that might occur in certain situations.  It involves using the `:not()` pseudo-class with a nested selector and a class that's dynamically added or removed. 
+```css
+.container :not(.highlight) { background-color: lightgray; }
+.highlight { background-color: yellow; }
+```
+This code aims to give a light gray background to elements within the `.container` unless they have the `highlight` class. The problem arises when the `highlight` class is added and removed rapidly or due to race conditions. The browser might not update the styling immediately after the class is removed, resulting in flickering or inconsistent styling for a short period.
