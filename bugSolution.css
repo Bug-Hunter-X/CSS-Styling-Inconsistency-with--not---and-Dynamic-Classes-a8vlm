@@ -1,0 +1,6 @@
+A more robust and less error-prone approach is to avoid the `:not()` pseudo-class in cases involving rapidly changing classes.  Instead of negatively selecting elements, style the elements directly.
+```css
+.container { background-color: lightgray; }
+.highlight { background-color: yellow; }
+```
+This method is simpler, more efficient, and less prone to rendering inconsistencies. It also might have better performance in browsers, especially with many elements.
